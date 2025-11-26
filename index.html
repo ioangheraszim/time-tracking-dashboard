@@ -10,85 +10,48 @@
       href="./images/favicon-32x32.png"
     />
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <script defer src="./script.js"></script>
     <title>Frontend Mentor | Time tracking dashboard</title>
   </head>
   <body>
-    Report for Jeremy Robson Daily Weekly Monthly Work 5hrs
-    <!-- daily -->
-    Previous - 7hrs
-    <!-- daily -->
-    32hrs
-    <!-- weekly -->
-    Previous - 36hrs
-    <!-- weekly -->
-    103hrs
-    <!-- monthly -->
-    Previous - 128hrs
-    <!-- monthly -->
-
-    Play 1hr
-    <!-- daily -->
-    Previous - 2hrs
-    <!-- daily -->
-    10hrs
-    <!-- weekly -->
-    Previous - 8hrs
-    <!-- weekly -->
-    23hrs
-    <!-- monthly -->
-    Previous - 29hrs
-    <!-- monthly -->
-
-    Study 0hrs
-    <!-- daily -->
-    Previous - 1hr
-    <!-- daily -->
-    4hrs
-    <!-- weekly -->
-    Previous - 7hrs
-    <!-- weekly -->
-    13hrs
-    <!-- monthly -->
-    Previous - 19hrs
-    <!-- monthly -->
-
-    Exercise 1hr
-    <!-- daily -->
-    Previous - 1hr
-    <!-- daily -->
-    4hrs
-    <!-- weekly -->
-    Previous - 5hrs
-    <!-- weekly -->
-    11hrs
-    <!-- monthly -->
-    Previous - 18hrs
-    <!-- monthly -->
-
-    Social 1hr
-    <!-- daily -->
-    Previous - 3hrs
-    <!-- daily -->
-    5hrs
-    <!-- weekly -->
-    Previous - 10hrs
-    <!-- weekly -->
-    21hrs
-    <!-- monthly -->
-    Previous - 23hrs
-    <!-- monthly -->
-
-    Self Care 0hrs
-    <!-- daily -->
-    Previous - 1hr
-    <!-- daily -->
-    2hrs
-    <!-- weekly -->
-    Previous - 2hrs
-    <!-- weekly -->
-    7hrs
-    <!-- monthly -->
-    Previous - 11hrs
-    <!-- monthly -->
+    <main class="container">
+      <section class="profile">
+        <div class="profile__wrapper">
+          <div class="profile__img-container">
+            <img src="./images/image-jeremy.png" alt="profile picture" />
+          </div>
+          <div class="profile__text">
+            <p class="profile__text-report">Report for</p>
+            <p class="profile__text-name">Jeremy Robson</p>
+          </div>
+        </div>
+        <div class="profile__btn-container">
+          <button id="btnDaily" class="profile__btn">Daily</button>
+          <button id="btnWeekly" class="profile__btn">Weekly</button>
+          <button id="btnMonthly" class="profile__btn">Monthly</button>
+        </div>
+      </section>
+      <section class="stats">
+        <div class="stats__card stats__card--work">
+          <div class="stats__card-background"></div>
+          <div class="stats__card-content">
+            <div class="stats__card-category">
+              <p class="stats__name">Work</p>
+              <button><img src="./images/icon-ellipsis.svg" alt="" /></button>
+            </div>
+            <div class="stats__numbers">
+              <p class="stats__numbers-hrs">32hrs</p>
+              <p class="stats__numbers-time">Last Week - 36hrs</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
