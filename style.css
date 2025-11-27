@@ -156,6 +156,8 @@ button {
   border-radius: 1rem;
   background-repeat: no-repeat;
   background-position: 90% -20%;
+  opacity: 0;
+  transform: scale(1.3);
 }
 
 .stats__card--work {
@@ -225,6 +227,21 @@ button {
 
 .stats__numbers-time {
   color: var(--navy-200);
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(1.3);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.stats__card.animate {
+  animation: popIn 0.5s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
 }
 
 @media (min-width: 775px) {

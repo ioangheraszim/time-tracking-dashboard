@@ -15,11 +15,10 @@ function renderStats(data, timeframe) {
   const container = document.querySelector(".stats");
   container.innerHTML = "";
 
-  data.forEach((item) => {
-    // Card wrapper
+  data.forEach((item, index) => {
     const card = document.createElement("div");
-    const cardTitle = item.title.toLowerCase().replace(/\s+/g, "-");
-    card.classList.add("stats__card", `stats__card--${cardTitle}`);
+    const safeTitle = item.title.toLowerCase().replace(/\s+/g, "-");
+    card.classList.add("stats__card", `stats__card--${safeTitle}`);
 
     // Background
     const backgroundEl = document.createElement("div");
@@ -56,7 +55,6 @@ function renderStats(data, timeframe) {
     const time = document.createElement("p");
     time.classList.add("stats__numbers-time");
 
-    // Label changes depending on timeframe
     let label = "";
     if (timeframe === "daily") label = "Yesterday";
     if (timeframe === "weekly") label = "Last Week";
@@ -74,6 +72,10 @@ function renderStats(data, timeframe) {
     // Assemble card
     card.appendChild(backgroundEl);
     card.appendChild(content);
+
+    // Animation
+    card.classList.add("animate");
+    card.style.animationDelay = `${index * 0.15}s`;
 
     container.appendChild(card);
   });
