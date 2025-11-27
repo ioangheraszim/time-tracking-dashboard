@@ -2,7 +2,7 @@ let statsData = [];
 
 async function loadData() {
   try {
-    const response = await fetch("/data.json");
+    const response = await fetch("data.json");
     const jsons = await response.json();
     statsData = jsons;
     renderStats(statsData, "weekly"); // default view
